@@ -1,32 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>15 min City</title>
-    <meta name="description" content="15 min City"> 
-    <meta name="keywords" content="15 min City">
-    <meta name="author" content="Gerardo Ezequiel Martín Carreño">
-    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <meta name="description" content="15 min City" />
+    <meta name="keywords" content="15 min City" />
+    <meta name="author" content="Gerardo Ezequiel Martín Carreño" />
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
 
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/main.css" />
 
+    <!-- Mapbox GL JS  -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css"
+    />
 
-<!-- Styles -->
-<link rel="stylesheet" href="styles/normalize.css">
-<link rel="stylesheet" href="styles/main.css">
-<link rel="stylesheet" href="https://api.mapbox.com/mapbox-assembly/v1.5.1/assembly.min.css" >
-<link href='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css' rel='stylesheet' />
+    <!-- Assembly -->
+    <script
+      async
+      defer
+      src="https://api.mapbox.com/mapbox-assembly/v1.5.1/assembly.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://api.mapbox.com/mapbox-assembly/v1.5.1/assembly.min.css"
+    />
+  </head>
 
-<!-- Scripts -->
-<script async defer src="https://api.mapbox.com/mapbox-assembly/v1.5.1/assembly.js"></script>
-<script src='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js'></script>
+  <body>
+    <div id="map"></div>
 
+    <!-- Create a sidebar where we have three buttons with round borders -->
+    <div class="absolute fl my12 mx24 py12 px12 bg-gray-faint round">
+      <form id="params">
+        <h4 class="txt-sm txt-bold mb6">Chose a maximum duration:</h4>
+        <div class="mb12 mr12 toggle-group align-center">
+          <label class="toggle-container">
+            <input name="duration" type="radio" value="5" />
+            <div class="toggle toggle--s toggle--active-null toggle--null">
+              5 min
+            </div>
+          </label>
+          <label class="toggle-container">
+            <input name="duration" type="radio" value="15" checked />
+            <div class="toggle toggle--s toggle--active-null toggle--null">
+              15 min
+            </div>
+          </label>
+          <label class="toggle-container">
+            <input name="duration" type="radio" value="30" />
+            <div
+              class="toggle toggle--s toggle--s toggle--active-null toggle--null"
+            >
+              30 min
+            </div>
+          </label>
+          <label class="toggle-container">
+            <input name="duration" type="radio" value="60" />
+            <div
+              class="toggle toggle--s toggle--s toggle--active-null toggle--null"
+            >
+              60 min
+            </div>
+          </label>
+        </div>
+      </form>
+    </div>
 
-
-<body>
-  <div id="map"></div>
-
-
-<script type="module" src="./scripts/app.js"></script>
-</body>
-
+    <script type="module" src="./scripts/app.js"></script>
+  </body>
 </html>

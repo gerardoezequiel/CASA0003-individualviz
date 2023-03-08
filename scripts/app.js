@@ -41,3 +41,5 @@ const marker = new mapboxgl.Marker({
 })
   .setLngLat(coordinatesUCL)
   .addTo(map);
+
+  
