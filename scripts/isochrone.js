@@ -21,11 +21,11 @@ export const addIsoChrone = async ({
       source: "iso",
       // layout: { visibility: 'none' },
       paint: {
-        "fill-color": "#5a3fc0",
+        "fill-color": "#f3a64f",
         "fill-opacity": 0.3,
       },
     },
     "poi-label"
   );
-  marker.setLngLat({ lon: longitude, lat: latitude }).addTo(map);
+
 };

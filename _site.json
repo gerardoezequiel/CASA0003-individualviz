@@ -36,13 +36,6 @@
       "fileSize" : 1156
     },
     {
-      "path" : "isochrone.html",
-      "mimeType" : "text/html",
-      "lastUpdated" : 1678306008,
-      "checksum" : "26baadc6c81baa063f5503da2a589716",
-      "fileSize" : 5208
-    },
-    {
       "path" : ".git/objects/e3/479c87afd403ca191d8f11362758ff26746ce4",
       "mimeType" : "application/octet-stream",
       "lastUpdated" : 1678291072,
@@ -199,9 +192,9 @@
     {
       "path" : "index.html",
       "mimeType" : "text/html",
-      "lastUpdated" : 1678304547,
-      "checksum" : "96696147caa701a90fc0611778574cf0",
-      "fileSize" : 2831
+      "lastUpdated" : 1678313646,
+      "checksum" : "c7e2fe2001a116853e38482605742caf",
+      "fileSize" : 2986
     },
     {
       "path" : ".git/info/exclude",
@@ -269,9 +262,9 @@
     {
       "path" : "scripts/isochrone.js",
       "mimeType" : "text/javascript",
-      "lastUpdated" : 1678303310,
-      "checksum" : "2e367e808b34b06558e563f4e9aae9b3",
-      "fileSize" : 550
+      "lastUpdated" : 1678316480,
+      "checksum" : "4f308512f61f6714ae762db8f2a1d84d",
+      "fileSize" : 485
     },
     {
       "path" : ".git/objects/d9/ee4a079e74535a1ff28fc710f2ec010c1c22db",
@@ -360,9 +353,9 @@
     {
       "path" : "scripts/app.js",
       "mimeType" : "text/javascript",
-      "lastUpdated" : 1678307388,
-      "checksum" : "9dcf88a44f93b258960b294b8e5734d2",
-      "fileSize" : 3007
+      "lastUpdated" : 1678316943,
+      "checksum" : "7a7faa46f0dafd7a5ee8ac984f1323e2",
+      "fileSize" : 4585
     },
     {
       "path" : ".git/objects/pack/pack-42c760b28382441d9c3d90f6407a5d7b8cb315b2.pack",
@@ -398,6 +391,13 @@
       "lastUpdated" : 1678300870,
       "checksum" : "5760f4162b01c5e3e31fa0ac36b7f05d",
       "fileSize" : 49
+    },
+    {
+      "path" : "scripts/opentripmap.js",
+      "mimeType" : "text/javascript",
+      "lastUpdated" : 1678315810,
+      "checksum" : "6413d1efa1ddc69c77de3ac1ef29f72c",
+      "fileSize" : 892
     },
     {
       "path" : ".git/refs/heads/main",
