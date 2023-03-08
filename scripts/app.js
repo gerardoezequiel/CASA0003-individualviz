@@ -17,10 +17,10 @@ const getLocation = () => {
     );
   });
 };
-
-map.on("load", async () => {
+// We add a DOMContentLoaded event listener to our window object. This event listener will be called when the DOM content has been loaded.
+window.addEventListener("DOMContentLoaded", async () => {
   // get coordinates of the user
-  const [longitude, latitude] = await getLocation();
+  const [longitude, latitude] = await getLocation(); // We use the async await to get the coordinates of the user.
   // Create a map object with UCL coordinates as the center
   const map = new mapboxgl.Map({
     container: "map", // container ID
