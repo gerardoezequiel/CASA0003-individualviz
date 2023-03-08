@@ -23,3 +23,12 @@ map.addControl(
     trackUserLocation: true,
   })
 );
+
+// Add scale control to the map
+map.addControl(
+  new mapboxgl.ScaleControl({
+    maxWidth: 100,
+    unit: "metric",
+  }),
+  "bottom-right"
+);
