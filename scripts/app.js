@@ -55,52 +55,6 @@ window.addEventListener("DOMContentLoaded", async () => {
     "bottom-right"
   );
 
-  map.addControl(directions, "bottom-left");
-
-  // Add a marker to the map
-  const marker = new mapboxgl.Marker({
-    color: "#f3a64f",
-    draggable: false,
-  })
-    .setLngLat([longitude, latitude])
-    .addTo(map);
-
-  //Isochrone API Mapbox
-
-  const params = document.getElementById("params");
-
-  // Create variables to use in getIso()
-  const urlBase = "https://api.mapbox.com/isochrone/v1/mapbox/";
-  let profile = "walking";
-  let minutes = 15;
-
-  //Create a function that sets up the Isochrone API query then makes a call
-  const getIso = async () => {
-    const query = `${urlBase}${profile}/${longitude},${latitude}?contours_minutes=${minutes}&polygons=true&access_token=${mapboxgl.accessToken}`;
-    const response = await fetch(query);
-    const data = await response.json();
-    map.getSource("iso").setData(data);
-  };
-  //If the user click in the buttom the value (html) it's passed to the query
-  const onChangeParams = async (event) => {
-    if (event.target.name === "profile") {
-      profile = event.target.value;
-      await getIso();
-    } else if (event.target.name === "duration") {
-      minutes = event.target.value;
-      await getIso();
-    }
-  };
-
-  // When a user changes the value of profile or duration by clicking a button, change the parameter's value and make the API query again
-
-  params.addEventListener("change", onChangeParams);
-
-  map.on("load", async () => {
-    await addIsoChrone({ map, marker, getIso, longitude, latitude });
-    directions.setOrigin([longitude, latitude]);
-  });
-
   //Adding the direction controller with IP direction as origin
   const directions = new MapboxDirections({
     unit: "metric",
@@ -124,4 +78,12 @@ window.addEventListener("DOMContentLoaded", async () => {
   document
     .querySelector('label[for="mapbox-directions-profile-driving"]')
     .remove();
+
+  // Add a marker to the map
+  const marker = new mapboxgl.Marker({
+    color: "#f3a64f",
+    draggable: false,
+  })
+    .setLngLat([longitude, latitude])
+    .addTo(map);
 }); // end of window onload

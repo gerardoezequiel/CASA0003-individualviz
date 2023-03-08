@@ -15,3 +15,11 @@ body {
   right: 0;
   left: 0;
 }
+
+.mapboxgl-ctrl-logo {
+  display: none !important;
+}
+
+.mapbox-directions-profile label {
+  width: 50% !important;
+}
