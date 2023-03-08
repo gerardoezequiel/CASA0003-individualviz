@@ -42,4 +42,18 @@ const marker = new mapboxgl.Marker({
   .setLngLat(coordinatesUCL)
   .addTo(map);
 
-  
+// We want the coordinates of the user
+// The function returns a promise, because we want to resolve the coordinates
+// We call the navigator.geolocation.getCurrentPosition() method
+// If the user allows us to get the coordinates, we resolve the promise with the coordinates
+// If the user doesn't allow us to get the coordinates, we reject the promise *
+
+const getLocation = () => {
+  return new Promise((resolve, reject) => {
+    navigator.geolocation.getCurrentPosition(
+      (position) =>
+        resolve([position.coords.longitude, position.coords.latitude]),
+      (error) => reject(error)
+    );
+  });
+};
