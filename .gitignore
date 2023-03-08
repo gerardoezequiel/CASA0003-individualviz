@@ -1,8 +1,8 @@
 # ignore vscode config files
-.vscode/
+.vscode
 
 # ignore .env files
-.env/
+.env
 
 # ignore Desktop service Store files
-.DS_Store/
+.DS_Store
