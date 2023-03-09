@@ -105,6 +105,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     const data = await response.json();
     map.getSource("iso").setData(data);
   };
+  
   //If the user click in the buttom the value (html) it's passed to the query
   const onChangeParams = async (event) => {
     if (event.target.name === "profile") {
@@ -123,8 +124,6 @@ window.addEventListener("DOMContentLoaded", async () => {
   })
     .setLngLat([longitude, latitude])
     .addTo(map);
-  
-  
 
   // When a user changes the value of profile or duration by clicking a button, change the parameter's value and make the API query again
   // When a user changes the position of the marker, change the parameter's value and make the API query again
