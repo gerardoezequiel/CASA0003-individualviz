@@ -123,6 +123,8 @@ window.addEventListener("DOMContentLoaded", async () => {
   })
     .setLngLat([longitude, latitude])
     .addTo(map);
+  
+  
 
   // When a user changes the value of profile or duration by clicking a button, change the parameter's value and make the API query again
   // When a user changes the position of the marker, change the parameter's value and make the API query again
