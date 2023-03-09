@@ -12,7 +12,7 @@ export const addOpenTripLayer = (map) => {
     maxzoom: 20,
     scheme: "xyz",
     tiles: [
-      "https://api.opentripmap.com/0.1/en/tiles/pois/{z}/{x}/{y}.pbf?kinds=interesting_places,tourist_facilities,sport&rate=3&apikey=" +
+      "https://api.opentripmap.com/0.1/en/tiles/pois/{z}/{x}/{y}.pbf?kinds=accomodations,tourist_facilities,natural,sport,cultural&rate=3&apikey=" +
         apiKey,
     ],
   });
@@ -47,7 +47,7 @@ export const addOpenTripLayer = (map) => {
     maxzoom: 12,
     scheme: "xyz",
     tiles: [
-      "https://api.opentripmap.com/0.1/en/tiles/heat/{z}/{x}/{y}.pbf?kinds=interesting_places&rate=3&apikey=" +
+      "https://api.opentripmap.com/0.1/en/tiles/heat/{z}/{x}/{y}.pbf?kinds=accomodations,tourist_facilities,natural,sport,cultural&rate=2&apikey=" +
         apiKey,
     ],
   });

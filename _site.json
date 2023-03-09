@@ -64,13 +64,6 @@
       "fileSize" : 632
     },
     {
-      "path" : "_site.json",
-      "mimeType" : "application/json",
-      "lastUpdated" : 1678347602,
-      "checksum" : "dc3c407495ec6a5bd5e0606143e5917b",
-      "fileSize" : 76236
-    },
-    {
       "path" : ".git/objects/0b/5bfbf4ff5f1bf53e42390f8b902ad08996b125",
       "mimeType" : "application/octet-stream",
       "lastUpdated" : 1678293416,
@@ -563,9 +556,9 @@
     {
       "path" : "scripts/opentripmap.js",
       "mimeType" : "text/javascript",
-      "lastUpdated" : 1678354855,
-      "checksum" : "c52b2da9515c567184cf6d75c9ee673b",
-      "fileSize" : 2379
+      "lastUpdated" : 1678373815,
+      "checksum" : "b76510913eea5528e5eb0e72c9ee7119",
+      "fileSize" : 2428
     },
     {
       "path" : ".git/objects/5c/da29182a2f0adc1b0410642a871da1768c8542",
