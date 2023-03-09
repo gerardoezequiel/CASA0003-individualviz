@@ -105,7 +105,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     const data = await response.json();
     map.getSource("iso").setData(data);
   };
-  
+
   //If the user click in the buttom the value (html) it's passed to the query
   const onChangeParams = async (event) => {
     if (event.target.name === "profile") {

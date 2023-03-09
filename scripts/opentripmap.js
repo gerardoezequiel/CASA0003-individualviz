@@ -58,7 +58,7 @@ export const addOpenTripLayer = (map) => {
       type: "heatmap",
       source: "opentripmap.heat",
       "source-layer": "heat",
-      minzoom: 8,
+      minzoom: 4,
       maxzoom: 12,
       filter: ["all"],
       paint: {
