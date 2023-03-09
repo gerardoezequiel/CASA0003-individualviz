@@ -23,3 +23,73 @@ body {
 .mapbox-directions-profile label {
   width: 50% !important;
 }
+
+img {
+  margin: auto;
+  padding: 10px;
+  display: block;
+}
+
+h2 {
+  font-family: interstate-condensed, sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+i {
+  font-family: interstate, sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+p {
+  font-family: axia, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.1rem;
+}
+
+@media (min-width: 600px) {
+  img {
+    margin: auto;
+    padding: 10px;
+    display: block;
+    width: 400px;
+  }
+  .mapboxgl-popup {
+    max-width: 500px !important;
+  }
+}
+
+img {
+  margin: auto;
+  padding: 10px;
+  display: block;
+  width: 500px;
+}
+
+body,
+input,
+textarea {
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 15px;
+  line-height: 24px;
+  font-family: interstate-condensed, sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 1.15rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+.txt-sm txt-bold mb6 {
+  font-size: 0.75rem;
+}
+
+.txt-bold {
+  font-weight: 900 !important;
+  font-size: smaller;
+}

@@ -1,5 +1,6 @@
 import { addIsoChrone } from "./isochrone.js";
 import { addOpenTripLayer } from "./opentripmap.js";
+import { addOtmPopUp } from "./otm-popup.js";
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoiZWZhY3VuZG9hcmdhbmEiLCJhIjoiY2p3em8wNzkzMHV0eDN6cG9xMDkyY3MweCJ9.BFwFTr19FLGdPHqxA8qkiQ";
@@ -23,15 +24,23 @@ const getLocation = () => {
 // We add a DOMContentLoaded event listener to our window object. This event listener will be called when the DOM content has been loaded.
 window.addEventListener("DOMContentLoaded", async () => {
   // get coordinates of the user
-  const [longitude, latitude] = await getLocation(); // We use the async await to get the coordinates of the user.
-  // Create a map object with UCL coordinates as the center
+  let [longitude, latitude] = await getLocation(); // We use the async await to get the coordinates of the user.
+  // Create a map object with user coordinates as the center
   const map = new mapboxgl.Map({
     container: "map", // container ID
     style: "mapbox://styles/geraezemc/ckhif49jm2l3x19ot4hmqsvz5", // style  URL style created by Gerardo Ezequiel with love
     attributionControl: true, // show attribution
-    center: [longitude, latitude], // UCL coordinates
-    zoom: 14,
+    center: [longitude, latitude], // user coordinates
+    zoom: 12,
   });
+
+  // Add geocoder control to the map
+  var geocoder = new MapboxGeocoder({
+    accessToken: mapboxgl.accessToken,
+    placeholder: "Search your address",
+  });
+
+  map.addControl(geocoder, "top-right");
 
   // Add zoom and rotation controls to the map.
   map.addControl(new mapboxgl.NavigationControl());
@@ -121,7 +130,8 @@ window.addEventListener("DOMContentLoaded", async () => {
 
   map.on("load", async () => {
     await addIsoChrone({ map, marker, getIso, longitude, latitude });
-    addOpenTripLayer(map);
+    await addOpenTripLayer(map);
+    addOtmPopUp({ map });
     directions.setOrigin([longitude, latitude]);
   });
 }); // end of window onload

@@ -1,10 +1,4 @@
-export const addIsoChrone = async ({
-  map,
-  getIso,
-  marker,
-  longitude,
-  latitude,
-}) => {
+export const addIsoChrone = async ({ map, getIso }) => {
   map.addSource("iso", {
     type: "geojson",
     data: {
@@ -28,4 +22,5 @@ export const addIsoChrone = async ({
     "poi-label"
   );
 
+  return map.getSource("iso");
 };
