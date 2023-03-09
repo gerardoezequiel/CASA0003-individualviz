@@ -7,4 +7,5 @@
 # ignore Desktop service Store files
 .DS_Store
 
-# ignore _site.jsonç
+# ignore _site.json
+_site.json
